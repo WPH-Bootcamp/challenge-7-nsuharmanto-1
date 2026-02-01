@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+}
+
+.btn-primary {
+  @apply bg-primary text-white rounded-xl px-4 py-2 font-bold;
+}
+.card {
+  @apply bg-white rounded-2xl shadow p-4;
+}
+
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .recommended-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-input-password-toggle-button,
+input[type="password"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-suffix {
+  display: none !important;
+}
+input[type="password"]::-webkit-input-password-toggle-button {
+  display: none !important;
+}
+
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 10 !important;
+}
+
+.header-solid {
+  z-index: 50;
+  position: fixed;
+}
